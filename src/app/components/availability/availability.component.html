@@ -1,0 +1,38 @@
+<p class="text-center text-danger">{{noAvailability}}</p>
+<div class="row justify-content-center align-items-center mb-3" *ngFor="let availability of availabilities">
+  <div class="col-12 col-lg-6">
+    <div class="card shadow">
+      <div class="card-body">
+        <div class="row" style="margin-top: 10px; margin-bottom: -15px">
+          <div class="col-4 col-lg-4">
+            <div [innerHTML]="getStatus(availability.isActive)"></div>
+          </div>
+          <div class="col-4 col-lg-4"></div>
+          <div class="col-4 col-lg-4 text-right">
+            <button (click)="gotoUpdateAvailability(availability)" type="button" class="btn btn-outline-danger font-13"
+                    style="min-width: 100%"><span
+              class="fa fa-address-book"></span> UPDATE
+            </button>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row mb-3">
+          <div class="col-4 col-lg-4 col-md-4 text-center">
+            <img src="assets/appointment.jpg" alt="" style="max-width: 90px">
+            <br>
+          </div>
+          <div class="col-8 col-lg-8 col-md-8">
+            <b class="font-14">Day: </b><span class="font-14" [innerHTML]="availability.dayText"></span>
+            <br>
+            <b class="font-14">From: </b><span class="font-14" [innerHTML]="availability.startTime"></span>
+            <br>
+            <b class="font-14">To: </b><span class="font-14" [innerHTML]="availability.endTime"></span>
+          </div>
+        </div>
+      </div>
+      <!--/card-block-->
+    </div>
+  </div>
+</div>
+

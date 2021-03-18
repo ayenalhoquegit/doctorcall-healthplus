@@ -1,0 +1,26 @@
+<p class="text-center text-danger">{{noCallLogs}}</p>
+<div class="row justify-content-center align-items-center mb-1" *ngFor="let calllog of callLogs">
+  <div class="col-12 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="row" style="margin-top: 10px; margin-bottom: -6px">
+          <div class="col-2 col-lg-2">
+            <img src="assets/user.png" alt="" style="max-width: 40px">
+          </div>
+          <div class="col-8 col-lg-8">
+            <p class="font-11 mb-0" [innerHTML]="calllog.name"></p>
+            <img *ngIf="calllog.callType === 'INCOMING'" src="assets/incoming.png" style="max-width: 25px">
+            <img *ngIf="calllog.callType === 'OUTGOING'" src="assets/outgoing.png" style="max-width: 25px">
+            <span class="font-11 ml-1" [innerHTML]="convertDate(calllog.callTime)"></span>
+          </div>
+          <div class="col-1 col-lg-1 text-right">
+            <i class="fa fa-phone mt-2 text-success" style="font-size: 20px;cursor: pointer"
+               (click)="gotoVideoCallWindow(calllog.appointmentId)"></i>
+          </div>
+        </div>
+      </div>
+      <!--/card-block-->
+    </div>
+  </div>
+</div>
+

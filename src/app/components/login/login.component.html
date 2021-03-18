@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm fixed-top justify-content-center theme-color-bg">
+  <h4>Health Plus</h4>
+</nav>
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="height:100vh">
+    <div class="col-12 col-lg-5 col-md-8">
+      <div style="height: 60px">
+        <alert></alert>
+      </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h3 class="text-center text-muted"><i class="fa fa-user-md"></i> DOCTOR LOGIN</h3>
+          <hr>
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="username" placeholder="Enter your username"
+                   required="required">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Enter your password"
+                   required="required">
+          </div>
+          <button (click)="doLogin()" class="btn theme-color-bg" style="border-radius: 30px;width: 100%">
+            Login <i class="fas fa-spinner fa-pulse" *ngIf="spinner === true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

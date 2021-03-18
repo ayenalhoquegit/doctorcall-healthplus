@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between theme-color-bg fixed-top p-2">
+  <div></div>
+  <div class="">
+    <h4>Health Plus</h4>
+  </div>
+  <div class="text-white mt-2 pr-2">
+    <i class="fas fa-sign-out-alt" style="font-size: 20px" (click)="logout()"></i>
+  </div>
+</div>
+<div class="container" style="max-width: 600px;margin: 0 auto;margin-top: 4rem !important;">
+  <ngx-spinner
+    name="main-spinner"
+    bdOpacity=0.8
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="timer"
+    fullScreen="true"
+  >
+    <p style="color: white"> Loading... </p>
+  </ngx-spinner>
+
+  <div class="col-12">
+    <h5 class="left-align">
+      <span style="position: relative;top: -4px"> <i class="fa fa-eye"></i> View Reports</span>
+    </h5>
+  </div>
+  <hr>
+  <alert></alert>
+  <div class="row">
+    <div *ngFor="let file of uploadedFiles;let i = index" style="float:left;">
+      <ng-container *ngIf="imageExtension.indexOf(file.extension) > -1" style="float: left">
+        <a href="{{file.url}}" target="_blank">
+          <img [src]="file.url" class="rounded mb-3" width="180" style="padding: 10px;position: relative;">
+        </a>
+      </ng-container>
+
+      <ng-container *ngIf="otherExtension.indexOf(file.extension) > -1" style="float: left">
+        <a href="{{file.url}}" target="_blank">
+          <img src='./assets/files.png' class="rounded mb-3" width="180" style="padding: 10px;position: relative;">
+        </a>
+      </ng-container>
+    </div>
+  </div>
+
+  <ngx-material-timepicker #startTime></ngx-material-timepicker>
+  <ngx-material-timepicker #endTime></ngx-material-timepicker>
+</div>
+

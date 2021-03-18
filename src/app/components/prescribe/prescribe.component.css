@@ -1,0 +1,10 @@
+.theme-color-bg {
+  background: #B71C1C;
+  color: white;
+}
+.select2-container .select2-selection--single{
+  height: 40px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 35px !important;
+}

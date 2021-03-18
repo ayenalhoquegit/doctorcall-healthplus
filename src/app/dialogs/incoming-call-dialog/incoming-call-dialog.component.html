@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Incoming Call</h4>
+</div>
+<div class="modal-body text-center">
+  <p>{{callerName}} is calling you</p>
+</div>
+<div class="row pb-3 pl-4 pr-4">
+  <div class="col-6">
+    <button type="button" class="btn btn-outline-danger" (click)="declineCall()">Decline
+    </button>
+  </div>
+
+  <div class="col-6">
+    <button type="button" class="btn btn-outline-success text-right" style="float: right" (click)="answerCall()">Answer
+    </button>
+  </div>
+</div>

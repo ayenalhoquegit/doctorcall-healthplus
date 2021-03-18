@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="height:100vh">
+    <div class="col-12 col-lg-5 col-md-8">
+      <div style="height: 60px">
+        <alert></alert>
+      </div>
+      <div class="card shadow">
+        <div class="card-body" style="padding: 1.25rem 1rem !important;">
+          <h4 class="text-secondary text-uppercase">Status:
+            <span class="" style="float: right" [ngClass]="availability == true ? 'text-success':'text-danger'">{{status}}</span>
+          </h4>
+          <hr>
+          <p style="float: left">CHANGE STATUS</p>
+          <label class="switch" style="float:right">
+            <input type="checkbox" [attr.checked]="availability == true ? 'checked' : null"
+                   (click)="changeAvailability()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

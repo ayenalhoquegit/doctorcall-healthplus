@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-between theme-color-bg fixed-top p-2">
+  <div></div>
+  <div class="">
+    <h4>Health Plus</h4>
+  </div>
+  <div class="text-white mt-2 pr-2">
+    <i class="fas fa-sign-out-alt" style="font-size: 20px" (click)="logout()"></i>
+  </div>
+</div>
+<alert></alert>
+<ngx-spinner
+  name="main-spinner"
+  bdOpacity=0.8
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="timer"
+  fullScreen="true"
+>
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+<div class="container" style="max-width: 600px;margin: 0 auto;margin-top: 4rem !important;">
+  <h3 class="text-center text-muted">{{slot.dayText}}'s Schedule</h3>
+  <hr>
+  <div class="text-center">
+    <alert></alert>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <label>Start Time</label>
+      <input class="form-control" #startTimeValue [ngxTimepicker]="startTime" [ngModel]="oldStartTime">
+    </div>
+
+    <div class="col-6">
+      <label>End Time</label>
+      <input class="form-control" #endTimeValue [ngxTimepicker]="endTime" [ngModel]="oldEndTime">
+    </div>
+
+    <div class="col-12">
+      <label>Choose Status</label>
+      <select class="form-control" #statusValue>
+        <option value="1" [selected]="slot.isActive">Enable</option>
+        <option value="0" [selected]="!slot.isActive">Disable</option>
+      </select>
+    </div>
+  </div>
+  <hr>
+  <div class="text-center">
+    <button (click)="cancelUpdate()" class="text-center btn btn-outline-danger" style="min-width: 100px;float: left">
+      <i class="fa fa-times"></i> Cancel
+    </button>
+    <button (click)="updateSlot(startTimeValue.value, endTimeValue.value, statusValue.value)"
+            class="text-center btn btn-outline-primary" style="min-width: 100px;float: right">
+      <i class="fa fa-upload"></i> Update
+    </button>
+  </div>
+
+  <ngx-material-timepicker #startTime></ngx-material-timepicker>
+  <ngx-material-timepicker #endTime></ngx-material-timepicker>
+</div>
+
