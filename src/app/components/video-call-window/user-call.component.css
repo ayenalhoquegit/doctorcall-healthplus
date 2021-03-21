@@ -1,0 +1,150 @@
+.col.s12 > .btn {
+  width: 100%;
+  border-radius: 26px;
+}
+
+.titles {
+  font-size: 1em;
+  width: 100%;
+  font-weight: 600;
+  padding: 0px 0px 5px 10px !important;
+  margin-top: 10px !important;
+}
+
+.pp {
+  padding: 10px;
+}
+
+.hit {
+  height: auto;
+  min-height: 90px;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  width: 140px;
+}
+
+.hit a {
+  display: block;
+  padding: 14px 10px 6px 10px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.hit a img {
+  height: 60px;
+}
+
+.pnone {
+  padding: 0px !important;
+}
+
+.box-sdw {
+  margin-top: 10px;
+  border-left: 3px red solid;
+}
+
+.tbl {
+  padding: 0px !important;
+  margin-top: 10px;
+}
+
+.tbl tr td {
+  text-align: center !important;
+  padding: 0px !important;
+}
+
+.tbl tr td span {
+  margin-bottom: 10px;
+}
+
+.leftT {
+  text-align: left !important;
+}
+
+.RightT {
+  text-align: right !important;
+}
+
+.ftr {
+  padding: 4px 3px 4px 10px !important;
+}
+
+.hits {
+  height: auto;
+}
+
+.hits p {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.hits a {
+  display: block;
+  text-align: center;
+  padding: 17px 28px 6px 10px
+}
+
+.hits a img {
+  height: 35px;
+}
+
+#main-video {
+  position: relative;
+}
+
+#remote_participant {
+  width: 100px;
+  height: auto;
+  z-index: 1000;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#action_buttons {
+  z-index: 1000;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.action_buttons_span {
+  height: 45px;
+  width: 45px;
+  background-color: #bbbbbb;
+  border-radius: 120%;
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.action_buttons_span i.microphone_mute {
+  margin-top: 11px;
+  margin-left: 14px;
+  font-size: 25px;
+}
+
+.action_buttons_span i.microphone_unmute {
+  margin-top: 11px;
+  margin-left: 6px;
+  font-size: 25px;
+}
+
+
+.action_buttons_span i.drop_call {
+  margin-top: 11px;
+  margin-left: 9px;
+  font-size: 25px;
+}
+
+/*video*/
+.theme-color-bg {
+  background: #B71C1C;
+  color: white;
+}

@@ -17,6 +17,9 @@ export class ApiEndpoints {
   public readonly endCallDoctor = this.baseUrl + 'v4/call-service/providers/route/peer/';
   public readonly receiveCall = this.baseUrl + 'v4/call-service/providers/route/token/';
 
+  public  readonly  startCall = this.baseUrl + 'v4/call-service/participants/route/token/';
+  public  readonly  endCall = this.baseUrl + 'v4/call-service/participants/route/peer/';
+
 
   public readonly appointments = this.baseUrl + 'v3/roasters/appointments/';
   public readonly availabilities = this.baseUrl + 'v3/roasters/appointments/slots/availabilities/';

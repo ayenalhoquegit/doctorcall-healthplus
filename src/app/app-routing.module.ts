@@ -6,6 +6,7 @@ import {PrescribeComponent} from './components/prescribe/prescribe.component';
 import {UpdateAvailabilityComponent} from './components/availability/update-availability/update-availability.component';
 import {VideoCallWindowComponent} from './components/video-call-window/video-call-window.component';
 import {ViewReportsComponent} from './components/view-reports/view-reports.component';
+import {UserVideoCallWindowComponent} from './components/video-call-window/user-call.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'user-video-call-window/:msisdn/:peer_id',
+    component: UserVideoCallWindowComponent
   },
   {
     path: 'dashboard/prescribe',
@@ -30,10 +35,10 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'dashboard/video-call-window?msisdn=:msisdn&peer_id=:peer_id',
+    path: 'dashboard/video-call-window',
     component: VideoCallWindowComponent,
     canActivate: [AuthGuard]
-  },
+  }
 ];
 
 @NgModule({
