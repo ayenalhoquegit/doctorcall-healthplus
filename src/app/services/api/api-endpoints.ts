@@ -6,7 +6,7 @@ export class ApiEndpoints {
  // private baseUrl = 'https://healthplus.life:8081/'; // dev http
  // private baseUrl = 'http://192.168.7.234:8080/'; // live https5
   // private baseUrl = 'http://45.114.85.19:8081/'; // live https5
-  private baseUrl = 'https://patientservicebd.com:8444/'; // dev https5
+  private baseUrl = 'https://patientservicebd.com:8443/'; // dev https5
 
 
   public readonly doctorLogin = this.baseUrl + 'v4/call-service/providers/login/';
