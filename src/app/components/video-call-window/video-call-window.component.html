@@ -18,6 +18,7 @@
   <p style="color: white"> Loading... </p>
 </ngx-spinner>
 <div class="container" style="margin-top: 4rem !important;">
+  <p>Call is connected to a patient from <strong>{{participant}}</strong></p>
   <div class="row" id="session" style="max-width: 700px;margin: 0 auto;padding: 5px;">
     <div *ngIf="mainStreamManager" id="main-video" class="col-12 col-lg-12" style="padding: 0px">
       <div *ngFor="let sub of subscribers">

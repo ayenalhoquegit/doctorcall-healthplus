@@ -32,6 +32,7 @@ export class VideoCallWindowComponent implements OnDestroy, OnInit {
   conversation_id: any;
   appointment_id_rcv: any;
   conversation_id_rcv: any;
+  participant: any;
 
   constructor(private httpClient: HttpClient,
               private getData: APIService,
@@ -40,6 +41,7 @@ export class VideoCallWindowComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): any {
+    this.participant = localStorage.getItem('participant');
     this.subsState = null;
     this.volumeState = 'active';
     this.mistaken_drop = null;

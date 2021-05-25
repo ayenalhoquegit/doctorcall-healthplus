@@ -68,6 +68,7 @@ export class DashboardComponent implements OnInit {
           localStorage.setItem('peer_id', response.data.peerId);
           localStorage.setItem('peer_id_video_call', response.data.peerId);
           localStorage.setItem('ringing', 'value');
+          localStorage.setItem('participant', response.data.participant)
 
           this.open(response.data.participant);
           this.common.playRing();
