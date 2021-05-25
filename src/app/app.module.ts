@@ -22,7 +22,11 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ConfirmDialogComponent} from './dialogs/confirm-dialog/confirm-dialog.component';
 import {IncomingCallDialogComponent} from './dialogs/incoming-call-dialog/incoming-call-dialog.component';
 import {ViewReportsComponent} from './components/view-reports/view-reports.component';
+<<<<<<< HEAD
 import {UserCallWindow} from "./components/user-call/video-call-window.component";
+=======
+import {UserVideoCallWindowComponent} from './components/video-call-window/user-call.component';
+>>>>>>> ff5ff23abfb7b321d99c68178ddbd39c79ab1892
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import {UserCallWindow} from "./components/user-call/video-call-window.component
     ConfirmDialogComponent,
     IncomingCallDialogComponent,
     ViewReportsComponent,
+<<<<<<< HEAD
     UserCallWindow
+=======
+    UserVideoCallWindowComponent
+>>>>>>> ff5ff23abfb7b321d99c68178ddbd39c79ab1892
   ],
   imports: [
     BrowserModule,

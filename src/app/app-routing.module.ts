@@ -6,7 +6,11 @@ import {PrescribeComponent} from './components/prescribe/prescribe.component';
 import {UpdateAvailabilityComponent} from './components/availability/update-availability/update-availability.component';
 import {VideoCallWindowComponent} from './components/video-call-window/video-call-window.component';
 import {ViewReportsComponent} from './components/view-reports/view-reports.component';
+<<<<<<< HEAD
 import {UserCallWindow} from "./components/user-call/video-call-window.component";
+=======
+import {UserVideoCallWindowComponent} from './components/video-call-window/user-call.component';
+>>>>>>> ff5ff23abfb7b321d99c68178ddbd39c79ab1892
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -14,6 +18,10 @@ const routes: Routes = [
     path: 'dashboard',
     loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'user-video-call-window/:msisdn/:peer_id',
+    component: UserVideoCallWindowComponent
   },
   {
     path: 'dashboard/prescribe',
@@ -34,11 +42,14 @@ const routes: Routes = [
     path: 'dashboard/video-call-window',
     component: VideoCallWindowComponent,
     canActivate: [AuthGuard]
+<<<<<<< HEAD
   },
   {
     path: 'user-call-window?msisdn=:msisdn&peer_id=:peer_id',
     component: UserCallWindow,
     canActivate: [AuthGuard]
+=======
+>>>>>>> ff5ff23abfb7b321d99c68178ddbd39c79ab1892
   }
 ];
 

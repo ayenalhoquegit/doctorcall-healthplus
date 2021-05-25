@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 import {ApiEndpoints} from './api-endpoints';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -48,9 +49,27 @@ export class APIService {
     );
   }
 
+
   public getReceiveToken(peerID): any {
     return this.http.post(this.endPoints.receiveCall + peerID, '').pipe(
       catchError(this.handleError),
+    );
+  }
+
+  public  startCall(peerID, usermsisdn): any{
+    return this.http.post(this.endPoints.startCall + peerID, {},{
+      headers: {
+        msisdn: usermsisdn
+      }
+    }).pipe(catchError(this.handleError)
+    );
+  }
+  public  userEndCall(peerID, usermsisdn): any{
+    return this.http.delete(this.endPoints.endCall + peerID, {
+      headers: {
+        msisdn: usermsisdn
+      }
+    }).pipe(catchError(this.handleError)
     );
   }
 
